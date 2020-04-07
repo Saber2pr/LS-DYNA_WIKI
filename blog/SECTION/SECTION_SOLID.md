@@ -1,7 +1,7 @@
 ### *SECTION_SOLID_{OPTION}
 
 Options include:
-	\<BLANK\>
+	{BLANK}
 	ALE
 such that the keyword cards appear:
 	*SECTION_SOLID
