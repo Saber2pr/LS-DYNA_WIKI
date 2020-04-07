@@ -29,51 +29,89 @@ Type 		F		F		F		F		F		F		F
 
 ### VARIABLE-DESCRIPTION
 
-SECID 	Section ID. SECID is referenced on the *PART card and must be unique.
+1. SECID
 
-ELFORM 	Element formulation options, (see remark 3 below):
-			EQ.0: 1 point corotational for *MAT_MODIFIED_HONEYCOMB.
-				  See remark 4 below.
-			EQ.1: constant stress solid element (default),
-			EQ.2: fully integrated S/R solid. See remark 5 below,
-			EQ.3: fully integrated quadratic 8 node element with nodal rotations,
-			EQ.4: S/R quadratic tetrahedron element with nodal rotations,
-			EQ.5: 1 point ALE,
-			EQ.6: 1 point Eulerian,
-			EQ.7: 1 point Eulerian ambient,
-			EQ.8: acoustic,
-			EQ.9: 1 point corotational for *MAT_MODIFIED_HONEYCOMB.
-			 See remark 4 below.
-			EQ.10: 1 point tetrahedron.
-			EQ.11: 1 point ALE multi-material element
-			EQ.12: 1 point integration with single material and void.
-			EQ.13: 1 point nodal pressure tetrahedron for bulk forming.
-			EQ.14: 8 point acoustic
-			EQ.15: 2 point pentahedron element.
-			EQ.18: 8 point enhanced strain solid element for linear statics only,
-			EQ.31: 1 point Eulerian Navier-Stokes
-			EQ.32: 8 point Eulerian Navier-Stokes
-			
-AET 	Ambient Element type: Can be defined for ELFORM 7, 11 and 12.
-			EQ.1: temperature (not currently available),
-			EQ.2: pressure and temperature (not currently available),
-			EQ.3: pressure outflow,
-			EQ.4: pressure inflow.(Default for ELFORM 7)
-			
-AFAC 	Smoothing weight factor - Simple average:
-			EQ.-1: turn smoothing off.
+Section ID. SECID is referenced on the *PART card and must be unique.
 
-BFAC 	Smoothing weight factor - Volume weighting
+---
 
-CFAC 	Smoothing weight factor - Isoparametric
+2. ELFORM
 
-DFAC 	Smoothing weight factor - Equipotential
+Element formulation options, (see remark 3 below):
+	EQ.0: 1 point corotational for *MAT_MODIFIED_HONEYCOMB.
+		  See remark 4 below.
+	EQ.1: constant stress solid element (default),
+	EQ.2: fully integrated S/R solid. See remark 5 below,
+	EQ.3: fully integrated quadratic 8 node element with nodal rotations,
+	EQ.4: S/R quadratic tetrahedron element with nodal rotations,
+	EQ.5: 1 point ALE,
+	EQ.6: 1 point Eulerian,
+	EQ.7: 1 point Eulerian ambient,
+	EQ.8: acoustic,
+	EQ.9: 1 point corotational for *MAT_MODIFIED_HONEYCOMB.
+	 See remark 4 below.
+	EQ.10: 1 point tetrahedron.
+	EQ.11: 1 point ALE multi-material element
+	EQ.12: 1 point integration with single material and void.
+	EQ.13: 1 point nodal pressure tetrahedron for bulk forming.
+	EQ.14: 8 point acoustic
+	EQ.15: 2 point pentahedron element.
+	EQ.18: 8 point enhanced strain solid element for linear statics only,
+	EQ.31: 1 point Eulerian Navier-Stokes
+	EQ.32: 8 point Eulerian Navier-Stokes
 
-START 	Start time for smoothing
+---
+		
+3. AET 	
 
-END 	End time for smoothing
+Ambient Element type: Can be defined for ELFORM 7, 11 and 12.
+	EQ.1: temperature (not currently available),
+	EQ.2: pressure and temperature (not currently available),
+	EQ.3: pressure outflow,
+	EQ.4: pressure inflow.(Default for ELFORM 7)
 
-AAFAC 	ALE advection factor
+---
+
+4. AFAC
+
+Smoothing weight factor - Simple average:
+	EQ.-1: turn smoothing off.
+
+---
+
+5. BFAC
+
+Smoothing weight factor - Volume weighting
+
+---
+
+6. CFAC
+
+Smoothing weight factor - Isoparametric
+
+---
+
+7. DFAC
+
+Smoothing weight factor - Equipotential
+
+---
+
+8. START
+
+Start time for smoothing
+
+---
+
+9. END
+
+End time for smoothing
+
+---
+
+10. AAFAC
+
+ALE advection factor
 
 ### Remarks:
 
