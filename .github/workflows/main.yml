@@ -1,0 +1,17 @@
+name: Github Pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+jobs:
+  Deploy-Pages:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: wiki-builder
+        # You may pin to the exact commit or the version.
+        # uses: Saber2pr/wiki-builder@e855aa6dbf7fee17e287cd92eed0246b92d9baf0
+        uses: Saber2pr/wiki-builder@v9
